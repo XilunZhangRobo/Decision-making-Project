@@ -35,8 +35,9 @@ class TradingEnv(gym.Env):
         self.prices, self.signal_features = self._process_data()
         self.shape = (window_size, self.signal_features.shape[1])
 
-        # spaces
-        self.action_space = gym.spaces.Discrete(len(Actions))
+        # spaces (allow subclasses to pre-define a different action space)
+        if not hasattr(self, "action_space"):
+            self.action_space = gym.spaces.Discrete(len(Actions))
         INF = 1e10
         self.observation_space = gym.spaces.Box(
             low=-INF, high=INF, shape=self.shape, dtype=np.float32,
@@ -54,6 +55,7 @@ class TradingEnv(gym.Env):
         self._total_profit = None
         self._first_rendering = None
         self.history = None
+        self._profit_floor = 1e-8  # terminate early when wealth is depleted
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed, options=options)
@@ -88,6 +90,10 @@ class TradingEnv(gym.Env):
         self._total_reward += step_reward
 
         self._update_profit(action)
+
+        # early stop if bankrupt
+        if self._total_profit is not None and self._total_profit <= self._profit_floor:
+            self._truncated = True
 
         trade = False
         if (

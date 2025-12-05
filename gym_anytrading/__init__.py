@@ -2,6 +2,7 @@ from gymnasium.envs.registration import register
 from copy import deepcopy
 
 from . import datasets
+from .envs import EnhancedStocksEnv
 
 
 register(
@@ -22,4 +23,14 @@ register(
         'window_size': 30,
         'frame_bound': (30, len(datasets.STOCKS_GOOGL))
     }
+)
+
+register(
+    id='stocks-enhanced-v0',
+    entry_point='gym_anytrading.envs:EnhancedStocksEnv',
+    kwargs={
+        'df': deepcopy(datasets.STOCKS_GOOGL),
+        'window_size': 60,
+        'frame_bound': (60, len(datasets.STOCKS_GOOGL)),
+    },
 )
