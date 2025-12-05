@@ -1,0 +1,1616 @@
+{
+  "random_baseline": {
+    "mean": 0.0003960754838772118,
+    "min": 0.0002793825406115502,
+    "max": 0.0005434982595033944
+  },
+  "random_enhanced": {
+    "mean": 0.8492482900619507,
+    "min": 0.6291730403900146,
+    "max": 1.1769245862960815
+  },
+  "baseline": [
+    {
+      "seed": 41,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        }
+      ],
+      "final_eval": {
+        "mean": 6.183993816375732,
+        "min": 6.183993816375732,
+        "max": 6.183993816375732
+      }
+    },
+    {
+      "seed": 42,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        }
+      ],
+      "final_eval": {
+        "mean": 6.183993816375732,
+        "min": 6.183993816375732,
+        "max": 6.183993816375732
+      }
+    },
+    {
+      "seed": 43,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        }
+      ],
+      "final_eval": {
+        "mean": 6.183993816375732,
+        "min": 6.183993816375732,
+        "max": 6.183993816375732
+      }
+    },
+    {
+      "seed": 44,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        }
+      ],
+      "final_eval": {
+        "mean": 6.183993816375732,
+        "min": 6.183993816375732,
+        "max": 6.183993816375732
+      }
+    },
+    {
+      "seed": 45,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 1.0,
+          "min_profit": 1.0,
+          "max_profit": 1.0
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 6.183993816375732,
+          "min_profit": 6.183993816375732,
+          "max_profit": 6.183993816375732
+        }
+      ],
+      "final_eval": {
+        "mean": 6.183993816375732,
+        "min": 6.183993816375732,
+        "max": 6.183993816375732
+      }
+    }
+  ],
+  "enhanced": [
+    {
+      "seed": 41,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 2.8108294010162354,
+          "min_profit": 2.8108294010162354,
+          "max_profit": 2.8108294010162354
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 6.689945697784424,
+          "min_profit": 6.689945697784424,
+          "max_profit": 6.689945697784424
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 11.188616752624512,
+          "min_profit": 11.188616752624512,
+          "max_profit": 11.188616752624512
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 13.666653633117676,
+          "min_profit": 13.666653633117676,
+          "max_profit": 13.666653633117676
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 15.837414741516113,
+          "min_profit": 15.837414741516113,
+          "max_profit": 15.837414741516113
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 15.185558319091797,
+          "min_profit": 15.185558319091797,
+          "max_profit": 15.185558319091797
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 20.240947723388672,
+          "min_profit": 20.240947723388672,
+          "max_profit": 20.240947723388672
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 21.245845794677734,
+          "min_profit": 21.245845794677734,
+          "max_profit": 21.245845794677734
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 25.224695205688477,
+          "min_profit": 25.224695205688477,
+          "max_profit": 25.224695205688477
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 32.215877532958984,
+          "min_profit": 32.215877532958984,
+          "max_profit": 32.215877532958984
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 34.84552764892578,
+          "min_profit": 34.84552764892578,
+          "max_profit": 34.84552764892578
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 41.445377349853516,
+          "min_profit": 41.445377349853516,
+          "max_profit": 41.445377349853516
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 39.67728042602539,
+          "min_profit": 39.67728042602539,
+          "max_profit": 39.67728042602539
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 46.837711334228516,
+          "min_profit": 46.837711334228516,
+          "max_profit": 46.837711334228516
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 47.19375991821289,
+          "min_profit": 47.19375991821289,
+          "max_profit": 47.19375991821289
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 51.27083206176758,
+          "min_profit": 51.270835876464844,
+          "max_profit": 51.270835876464844
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 54.43550109863281,
+          "min_profit": 54.43550109863281,
+          "max_profit": 54.43550109863281
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 63.0456657409668,
+          "min_profit": 63.0456657409668,
+          "max_profit": 63.0456657409668
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 68.34053039550781,
+          "min_profit": 68.34053039550781,
+          "max_profit": 68.34053039550781
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 66.17146301269531,
+          "min_profit": 66.17146301269531,
+          "max_profit": 66.17146301269531
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 78.40036010742188,
+          "min_profit": 78.40036010742188,
+          "max_profit": 78.40036010742188
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 87.49933624267578,
+          "min_profit": 87.49933624267578,
+          "max_profit": 87.49933624267578
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 86.08084106445312,
+          "min_profit": 86.08084106445312,
+          "max_profit": 86.08084106445312
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 102.15493774414062,
+          "min_profit": 102.15493774414062,
+          "max_profit": 102.15493774414062
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 101.00955963134766,
+          "min_profit": 101.00955963134766,
+          "max_profit": 101.00955963134766
+        }
+      ],
+      "final_eval": {
+        "mean": 97.5675048828125,
+        "min": 97.5675048828125,
+        "max": 97.5675048828125
+      }
+    },
+    {
+      "seed": 42,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 5.958617687225342,
+          "min_profit": 5.958617687225342,
+          "max_profit": 5.958617687225342
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 6.116980075836182,
+          "min_profit": 6.11698055267334,
+          "max_profit": 6.11698055267334
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 10.34607219696045,
+          "min_profit": 10.34607219696045,
+          "max_profit": 10.34607219696045
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 12.30235767364502,
+          "min_profit": 12.302358627319336,
+          "max_profit": 12.302358627319336
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 14.010586738586426,
+          "min_profit": 14.010586738586426,
+          "max_profit": 14.010586738586426
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 14.268363952636719,
+          "min_profit": 14.268363952636719,
+          "max_profit": 14.268363952636719
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 13.46602725982666,
+          "min_profit": 13.46602725982666,
+          "max_profit": 13.46602725982666
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 15.112105369567871,
+          "min_profit": 15.112105369567871,
+          "max_profit": 15.112105369567871
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 14.609291076660156,
+          "min_profit": 14.609291076660156,
+          "max_profit": 14.609291076660156
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 15.00366497039795,
+          "min_profit": 15.00366497039795,
+          "max_profit": 15.00366497039795
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 16.071041107177734,
+          "min_profit": 16.071041107177734,
+          "max_profit": 16.071041107177734
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 17.0072021484375,
+          "min_profit": 17.0072021484375,
+          "max_profit": 17.0072021484375
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 17.20217514038086,
+          "min_profit": 17.20217514038086,
+          "max_profit": 17.20217514038086
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 15.697636604309082,
+          "min_profit": 15.697636604309082,
+          "max_profit": 15.697636604309082
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 14.642756462097168,
+          "min_profit": 14.642755508422852,
+          "max_profit": 14.642755508422852
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 14.643961906433105,
+          "min_profit": 14.643960952758789,
+          "max_profit": 14.643960952758789
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 15.77708911895752,
+          "min_profit": 15.77708911895752,
+          "max_profit": 15.77708911895752
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 17.472774505615234,
+          "min_profit": 17.472774505615234,
+          "max_profit": 17.472774505615234
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 17.748451232910156,
+          "min_profit": 17.748451232910156,
+          "max_profit": 17.748451232910156
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 19.73406982421875,
+          "min_profit": 19.73406982421875,
+          "max_profit": 19.73406982421875
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 20.159011840820312,
+          "min_profit": 20.159011840820312,
+          "max_profit": 20.159011840820312
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 17.580108642578125,
+          "min_profit": 17.580108642578125,
+          "max_profit": 17.580108642578125
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 18.83342742919922,
+          "min_profit": 18.83342742919922,
+          "max_profit": 18.83342742919922
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 20.495882034301758,
+          "min_profit": 20.495882034301758,
+          "max_profit": 20.495882034301758
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 22.118276596069336,
+          "min_profit": 22.118274688720703,
+          "max_profit": 22.118274688720703
+        }
+      ],
+      "final_eval": {
+        "mean": 23.857746124267578,
+        "min": 23.857746124267578,
+        "max": 23.857746124267578
+      }
+    },
+    {
+      "seed": 43,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 2.7455179691314697,
+          "min_profit": 2.7455179691314697,
+          "max_profit": 2.7455179691314697
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 4.477250576019287,
+          "min_profit": 4.477250576019287,
+          "max_profit": 4.477250576019287
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 7.718079090118408,
+          "min_profit": 7.718079090118408,
+          "max_profit": 7.718079090118408
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 9.510492324829102,
+          "min_profit": 9.510492324829102,
+          "max_profit": 9.510492324829102
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 16.725601196289062,
+          "min_profit": 16.725601196289062,
+          "max_profit": 16.725601196289062
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 10.79845905303955,
+          "min_profit": 10.798460006713867,
+          "max_profit": 10.798460006713867
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 13.14365291595459,
+          "min_profit": 13.14365291595459,
+          "max_profit": 13.14365291595459
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 12.251025199890137,
+          "min_profit": 12.25102424621582,
+          "max_profit": 12.25102424621582
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 12.286192893981934,
+          "min_profit": 12.286192893981934,
+          "max_profit": 12.286192893981934
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 17.075300216674805,
+          "min_profit": 17.075300216674805,
+          "max_profit": 17.075300216674805
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 20.53902244567871,
+          "min_profit": 20.53902244567871,
+          "max_profit": 20.53902244567871
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 20.267723083496094,
+          "min_profit": 20.267723083496094,
+          "max_profit": 20.267723083496094
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 24.79417610168457,
+          "min_profit": 24.79417610168457,
+          "max_profit": 24.79417610168457
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 27.4387149810791,
+          "min_profit": 27.4387149810791,
+          "max_profit": 27.4387149810791
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 29.528350830078125,
+          "min_profit": 29.528350830078125,
+          "max_profit": 29.528350830078125
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 33.42414474487305,
+          "min_profit": 33.42414474487305,
+          "max_profit": 33.42414474487305
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 33.275394439697266,
+          "min_profit": 33.275394439697266,
+          "max_profit": 33.275394439697266
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 34.5611457824707,
+          "min_profit": 34.5611457824707,
+          "max_profit": 34.5611457824707
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 43.38233947753906,
+          "min_profit": 43.38233947753906,
+          "max_profit": 43.38233947753906
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 49.76566696166992,
+          "min_profit": 49.76566696166992,
+          "max_profit": 49.76566696166992
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 61.39009475708008,
+          "min_profit": 61.39009475708008,
+          "max_profit": 61.39009475708008
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 65.4294662475586,
+          "min_profit": 65.4294662475586,
+          "max_profit": 65.4294662475586
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 71.3599853515625,
+          "min_profit": 71.3599853515625,
+          "max_profit": 71.3599853515625
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 67.51625061035156,
+          "min_profit": 67.51625061035156,
+          "max_profit": 67.51625061035156
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 88.11441802978516,
+          "min_profit": 88.11442565917969,
+          "max_profit": 88.11442565917969
+        }
+      ],
+      "final_eval": {
+        "mean": 94.87016296386719,
+        "min": 94.87016296386719,
+        "max": 94.87016296386719
+      }
+    },
+    {
+      "seed": 44,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 3.7300631999969482,
+          "min_profit": 3.7300631999969482,
+          "max_profit": 3.7300631999969482
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 3.710627317428589,
+          "min_profit": 3.7106270790100098,
+          "max_profit": 3.7106270790100098
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.621379852294922,
+          "min_profit": 6.621379852294922,
+          "max_profit": 6.621379852294922
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 11.80419921875,
+          "min_profit": 11.80419921875,
+          "max_profit": 11.80419921875
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 14.575157165527344,
+          "min_profit": 14.575157165527344,
+          "max_profit": 14.575157165527344
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 12.904379844665527,
+          "min_profit": 12.904379844665527,
+          "max_profit": 12.904379844665527
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 13.100602149963379,
+          "min_profit": 13.100602149963379,
+          "max_profit": 13.100602149963379
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 14.788006782531738,
+          "min_profit": 14.788006782531738,
+          "max_profit": 14.788006782531738
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 15.658882141113281,
+          "min_profit": 15.658882141113281,
+          "max_profit": 15.658882141113281
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 19.037921905517578,
+          "min_profit": 19.037921905517578,
+          "max_profit": 19.037921905517578
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 15.901562690734863,
+          "min_profit": 15.90156364440918,
+          "max_profit": 15.90156364440918
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 19.233409881591797,
+          "min_profit": 19.233409881591797,
+          "max_profit": 19.233409881591797
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 17.428010940551758,
+          "min_profit": 17.428010940551758,
+          "max_profit": 17.428010940551758
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 19.23872947692871,
+          "min_profit": 19.23872947692871,
+          "max_profit": 19.23872947692871
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 18.63432502746582,
+          "min_profit": 18.63432502746582,
+          "max_profit": 18.63432502746582
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 18.99510383605957,
+          "min_profit": 18.99510383605957,
+          "max_profit": 18.99510383605957
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 18.19247055053711,
+          "min_profit": 18.19247055053711,
+          "max_profit": 18.19247055053711
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 19.904096603393555,
+          "min_profit": 19.904096603393555,
+          "max_profit": 19.904096603393555
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 16.461692810058594,
+          "min_profit": 16.461692810058594,
+          "max_profit": 16.461692810058594
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 19.236679077148438,
+          "min_profit": 19.236679077148438,
+          "max_profit": 19.236679077148438
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 14.826395988464355,
+          "min_profit": 14.826395988464355,
+          "max_profit": 14.826395988464355
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 17.053043365478516,
+          "min_profit": 17.053043365478516,
+          "max_profit": 17.053043365478516
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 17.650909423828125,
+          "min_profit": 17.650909423828125,
+          "max_profit": 17.650909423828125
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 19.180932998657227,
+          "min_profit": 19.180932998657227,
+          "max_profit": 19.180932998657227
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 19.94275665283203,
+          "min_profit": 19.94275665283203,
+          "max_profit": 19.94275665283203
+        }
+      ],
+      "final_eval": {
+        "mean": 20.62311363220215,
+        "min": 20.62311363220215,
+        "max": 20.62311363220215
+      }
+    },
+    {
+      "seed": 45,
+      "training_curve": [
+        {
+          "timestep": 5000,
+          "mean_profit": 5.380465030670166,
+          "min_profit": 5.380465030670166,
+          "max_profit": 5.380465030670166
+        },
+        {
+          "timestep": 10000,
+          "mean_profit": 6.3298115730285645,
+          "min_profit": 6.3298115730285645,
+          "max_profit": 6.3298115730285645
+        },
+        {
+          "timestep": 15000,
+          "mean_profit": 6.734139919281006,
+          "min_profit": 6.734139442443848,
+          "max_profit": 6.734139442443848
+        },
+        {
+          "timestep": 20000,
+          "mean_profit": 6.620344638824463,
+          "min_profit": 6.620344638824463,
+          "max_profit": 6.620344638824463
+        },
+        {
+          "timestep": 25000,
+          "mean_profit": 8.434375762939453,
+          "min_profit": 8.434375762939453,
+          "max_profit": 8.434375762939453
+        },
+        {
+          "timestep": 30000,
+          "mean_profit": 8.186615943908691,
+          "min_profit": 8.186615943908691,
+          "max_profit": 8.186615943908691
+        },
+        {
+          "timestep": 35000,
+          "mean_profit": 10.846150398254395,
+          "min_profit": 10.846151351928711,
+          "max_profit": 10.846151351928711
+        },
+        {
+          "timestep": 40000,
+          "mean_profit": 9.1261625289917,
+          "min_profit": 9.1261625289917,
+          "max_profit": 9.1261625289917
+        },
+        {
+          "timestep": 45000,
+          "mean_profit": 9.637206077575684,
+          "min_profit": 9.637206077575684,
+          "max_profit": 9.637206077575684
+        },
+        {
+          "timestep": 50000,
+          "mean_profit": 9.558137893676758,
+          "min_profit": 9.558137893676758,
+          "max_profit": 9.558137893676758
+        },
+        {
+          "timestep": 55000,
+          "mean_profit": 10.418798446655273,
+          "min_profit": 10.418798446655273,
+          "max_profit": 10.418798446655273
+        },
+        {
+          "timestep": 60000,
+          "mean_profit": 9.526674270629883,
+          "min_profit": 9.526674270629883,
+          "max_profit": 9.526674270629883
+        },
+        {
+          "timestep": 65000,
+          "mean_profit": 8.096640586853027,
+          "min_profit": 8.096640586853027,
+          "max_profit": 8.096640586853027
+        },
+        {
+          "timestep": 70000,
+          "mean_profit": 10.182744026184082,
+          "min_profit": 10.182744026184082,
+          "max_profit": 10.182744026184082
+        },
+        {
+          "timestep": 75000,
+          "mean_profit": 10.356424331665039,
+          "min_profit": 10.356424331665039,
+          "max_profit": 10.356424331665039
+        },
+        {
+          "timestep": 80000,
+          "mean_profit": 10.916718482971191,
+          "min_profit": 10.916718482971191,
+          "max_profit": 10.916718482971191
+        },
+        {
+          "timestep": 85000,
+          "mean_profit": 12.048663139343262,
+          "min_profit": 12.048663139343262,
+          "max_profit": 12.048663139343262
+        },
+        {
+          "timestep": 90000,
+          "mean_profit": 12.294711112976074,
+          "min_profit": 12.294711112976074,
+          "max_profit": 12.294711112976074
+        },
+        {
+          "timestep": 95000,
+          "mean_profit": 12.66463565826416,
+          "min_profit": 12.66463565826416,
+          "max_profit": 12.66463565826416
+        },
+        {
+          "timestep": 100000,
+          "mean_profit": 14.136746406555176,
+          "min_profit": 14.136746406555176,
+          "max_profit": 14.136746406555176
+        },
+        {
+          "timestep": 105000,
+          "mean_profit": 13.964042663574219,
+          "min_profit": 13.964042663574219,
+          "max_profit": 13.964042663574219
+        },
+        {
+          "timestep": 110000,
+          "mean_profit": 15.946659088134766,
+          "min_profit": 15.946659088134766,
+          "max_profit": 15.946659088134766
+        },
+        {
+          "timestep": 115000,
+          "mean_profit": 15.989081382751465,
+          "min_profit": 15.989081382751465,
+          "max_profit": 15.989081382751465
+        },
+        {
+          "timestep": 120000,
+          "mean_profit": 16.021364212036133,
+          "min_profit": 16.021364212036133,
+          "max_profit": 16.021364212036133
+        },
+        {
+          "timestep": 125000,
+          "mean_profit": 17.720813751220703,
+          "min_profit": 17.720813751220703,
+          "max_profit": 17.720813751220703
+        }
+      ],
+      "final_eval": {
+        "mean": 17.717544555664062,
+        "min": 17.717544555664062,
+        "max": 17.717544555664062
+      }
+    }
+  ]
+}
