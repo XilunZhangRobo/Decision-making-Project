@@ -2,6 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
+import gymnasium as gym
 from gymnasium import spaces
 
 from gym_anytrading.features.blr_cp_features import compute_blr_cp_features
@@ -33,7 +34,7 @@ class EnhancedStocksEnv(TradingEnv):
     def __init__(
         self,
         df,
-        window_size: int = 60,
+        window_size: int = 30,  # Match baseline window size
         frame_bound=None,
         render_mode=None,
         trade_fee_bid_percent: float = 0.001,
@@ -52,14 +53,10 @@ class EnhancedStocksEnv(TradingEnv):
         self.reward_trade_penalty = reward_trade_penalty
         self.vol_window = vol_window
 
-        # continuous action: target position weight in [-1, 1] (short to long)
-        self.action_space = spaces.Box(low=-1.0, high=1.0, shape=(1,), dtype=np.float32)
-
         super().__init__(df, window_size, render_mode)
 
     def reset(self, seed=None, options=None):
         obs, info = super().reset(seed=seed, options=options)
-        self._position_weight = 0.0
         return obs, info
 
     def _process_data(self):
@@ -82,43 +79,81 @@ class EnhancedStocksEnv(TradingEnv):
         end = self.frame_bound[1]
 
         prices_slice = prices[start:end]
-        base_features = np.column_stack(
-            [
-                prices_slice,
-                log_ret.to_numpy()[start:end],
-                sma_ratio.to_numpy()[start:end],
-                vol_win.to_numpy()[start:end],
-                rsi.to_numpy()[start:end],
-                vol_norm.to_numpy()[start:end],
-            ]
-        )
+        # Simple, proven features that actually help trading decisions:
 
-        # add model-based features (BLR forecast, regime_id, days_since_cp), cached if available
-        cache_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "datasets", "data", "STOCKS_GOOGL_blr_features.csv")
-        )
-        extra = compute_blr_cp_features(df, cache_path=cache_path, show_progress=True)
-        extra_slice = extra.iloc[start:end].to_numpy()
+        # 1. Price and momentum (what we had before)
+        # 2. Add just ONE key trend indicator: short-term trend direction
+        sma_10 = price_series.rolling(10).mean()
+        sma_30 = price_series.rolling(30).mean()
+        # Simple trend: positive when price > moving average (bullish)
+        trend_direction = np.sign(price_series - sma_30).fillna(0)
 
-        feature_slice = np.column_stack([base_features, extra_slice])
+        # Keep it simple: price, returns, mean-reversion, and trend
+        base_features = np.column_stack([
+            prices_slice / 1000.0,          # Normalized price
+            np.clip(log_ret.to_numpy()[start:end], -0.05, 0.05),  # Clipped returns
+            rsi.to_numpy()[start:end] / 100.0,  # Normalized RSI (0-1)
+            trend_direction.to_numpy()[start:end],  # Trend direction (-1, 0, 1)
+        ])
+
+        # Simplified: remove complex BLR features that might be noisy
+        # Just use basic technical indicators
+        feature_slice = base_features
 
         return prices_slice.astype(np.float32), feature_slice.astype(np.float32)
 
-    def _update_profit(self, price_change, target_weight):
-        """
-        Mark-to-market equity with continuous position sizing.
-        Fees applied on change in weight magnitude.
-        """
-        # price change applied to prior weight
-        gross_factor = 1.0 + self._position_weight * price_change
+    def _update_profit(self, action):
+        trade = False
+        if (
+            (action == Actions.Buy.value and self._position == Positions.Short) or
+            (action == Actions.Sell.value and self._position == Positions.Long)
+        ):
+            trade = True
 
-        # fees on turnover
-        turnover = abs(target_weight - self._position_weight)
-        fee_factor = 1.0 - turnover * (self.trade_fee_bid_percent + self.trade_fee_ask_percent)
+        if trade or self._truncated:
+            current_price = self.prices[self._current_tick]
+            last_trade_price = self.prices[self._last_trade_tick]
 
-        new_profit = self._total_profit * max(gross_factor * fee_factor, self._profit_floor)
-        self._position_weight = float(target_weight)
-        return new_profit
+            if self._position == Positions.Long:
+                shares = (self._total_profit * (1 - self.trade_fee_ask_percent)) / last_trade_price
+                self._total_profit = (shares * (1 - self.trade_fee_bid_percent)) * current_price
+
+    def _calculate_reward(self, action):
+        """
+        Sharpe-ratio optimized reward: maximize returns while minimizing volatility.
+        This should lead to more consistent, risk-adjusted performance.
+        """
+        step_reward = 0
+
+        trade = False
+        if (
+            (action == Actions.Buy.value and self._position == Positions.Short) or
+            (action == Actions.Sell.value and self._position == Positions.Long)
+        ):
+            trade = True
+
+        if trade:
+            current_price = self.prices[self._current_tick]
+            last_trade_price = self.prices[self._last_trade_tick]
+            price_diff = current_price - last_trade_price
+
+            if self._position == Positions.Long:
+                # Sharpe-like reward: returns minus volatility penalty
+                # This encourages steady gains over volatile swings
+                returns = price_diff / last_trade_price  # Percentage return
+
+                # Volatility penalty based on recent price swings
+                recent_prices = self.prices[max(0, self._current_tick-10):self._current_tick+1]
+                if len(recent_prices) > 1:
+                    volatility = np.std(np.diff(recent_prices) / recent_prices[:-1])
+                    volatility_penalty = volatility * 100.0
+                else:
+                    volatility_penalty = 0
+
+                # Reward consistent performance, penalize volatility
+                step_reward += (returns * 1000.0) - volatility_penalty
+
+        return step_reward
 
     def step(self, action):
         self._truncated = False
@@ -126,34 +161,26 @@ class EnhancedStocksEnv(TradingEnv):
         if self._current_tick == self._end_tick:
             self._truncated = True
 
-        # clip and parse continuous action to target weight [-1, 1]
-        arr = np.asarray(action).reshape(-1)
-        target_weight = float(np.clip(arr[0], -1.0, 1.0))
+        step_reward = self._calculate_reward(action)
+        self._total_reward += step_reward
 
-        # price change since last tick
-        prev_price = self.prices[self._current_tick - 1]
-        price = self.prices[self._current_tick]
-        price_change = (price - prev_price) / prev_price
+        self._update_profit(action)
 
-        prev_profit = self._total_profit
-        prev_weight = self._position_weight
-        turnover = abs(target_weight - prev_weight)
+        trade = False
+        if (
+            (action == Actions.Buy.value and self._position == Positions.Short) or
+            (action == Actions.Sell.value and self._position == Positions.Long)
+        ):
+            trade = True
 
-        # update profit using prior weight and turnover fees; then set new weight
-        new_profit = self._update_profit(price_change, target_weight)
-        reward = float(new_profit - prev_profit) * 100.0  # scale reward for better learning
-        if turnover > 0:
-            reward -= self.reward_trade_penalty  # discourage churn
-
-        self._total_profit = new_profit
-        self._total_reward += reward
+        if trade:
+            self._position = self._position.opposite()
+            self._last_trade_tick = self._current_tick
 
         # early stop if bankrupt
         if self._total_profit is not None and self._total_profit <= self._profit_floor:
             self._truncated = True
 
-        # track pseudo position enum for rendering/history
-        self._position = Positions.Long if self._position_weight >= 0 else Positions.Short
         self._position_history.append(self._position)
         observation = self._get_observation()
         info = self._get_info()
@@ -162,13 +189,32 @@ class EnhancedStocksEnv(TradingEnv):
         if self.render_mode == 'human':
             self._render_frame()
 
-        return observation, reward, False, self._truncated, info
+        return observation, step_reward, False, self._truncated, info
 
     def max_possible_profit(self):
-        # Approximate using perfect foresight on direction with costs applied
-        profit = 1.0
-        for i in range(self._start_tick + 1, self._end_tick + 1):
-            price_change = (self.prices[i] - self.prices[i - 1]) / self.prices[i - 1]
-            profit *= 1.0 + abs(price_change) * (1 - self.trade_fee_bid_percent - self.trade_fee_ask_percent)
+        current_tick = self._start_tick
+        last_trade_tick = current_tick - 1
+        profit = 1.
+
+        while current_tick <= self._end_tick:
+            position = None
+            if self.prices[current_tick] < self.prices[current_tick - 1]:
+                while (current_tick <= self._end_tick and
+                       self.prices[current_tick] < self.prices[current_tick - 1]):
+                    current_tick += 1
+                position = Positions.Short
+            else:
+                while (current_tick <= self._end_tick and
+                       self.prices[current_tick] >= self.prices[current_tick - 1]):
+                    current_tick += 1
+                position = Positions.Long
+
+            if position == Positions.Long:
+                current_price = self.prices[current_tick - 1]
+                last_trade_price = self.prices[last_trade_tick]
+                shares = profit / last_trade_price
+                profit = shares * current_price
+            last_trade_tick = current_tick - 1
+
         return profit
 

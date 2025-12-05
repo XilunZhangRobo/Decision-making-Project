@@ -30,7 +30,7 @@ register(
     entry_point='gym_anytrading.envs:EnhancedStocksEnv',
     kwargs={
         'df': deepcopy(datasets.STOCKS_GOOGL),
-        'window_size': 60,
-        'frame_bound': (60, len(datasets.STOCKS_GOOGL)),
+        'window_size': 30,  # Match baseline
+        'frame_bound': (30, len(datasets.STOCKS_GOOGL)),
     },
 )

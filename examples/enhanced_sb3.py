@@ -9,7 +9,7 @@ from copy import deepcopy
 import gymnasium as gym
 import numpy as np
 from stable_baselines3 import PPO, TD3
-from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.vec_env import SubprocVecEnv
 from stable_baselines3.common.monitor import Monitor
 
 import gym_anytrading
@@ -42,26 +42,49 @@ def evaluate(model, env, episodes: int = 5):
     }
 
 
-def train_agent(env_id: str, timesteps: int, learning_rate: float = 3e-4):
-    vec_env = DummyVecEnv([make_env(env_id)])
-    model = PPO(
-        "MlpPolicy",
-        vec_env,
-        n_steps=512,
-        batch_size=256,
-        gamma=0.995,
-        gae_lambda=0.95,
-        ent_coef=0.01,
-        learning_rate=learning_rate,
-        verbose=0,
-        seed=SEED,
-    )
+def train_agent(env_id: str, timesteps: int, learning_rate: float = 3e-4, n_envs: int = 4):
+    vec_env = SubprocVecEnv([make_env(env_id) for _ in range(n_envs)])
+
+    # Tune hyperparameters for enhanced observation space with fundamental features
+    if "enhanced" in env_id:
+        # Network for 4 simple features
+        policy_kwargs = dict(net_arch=[128, 64])
+        model = PPO(
+            "MlpPolicy",
+            vec_env,
+            n_steps=2048,  # Reasonable rollout buffer
+            batch_size=512,  # Moderate batch size
+            gamma=0.995,  # Standard horizon
+            gae_lambda=0.95,
+            ent_coef=0.015,  # Moderate entropy
+            learning_rate=learning_rate * 1.5,  # Moderate learning rate increase
+            clip_range=0.2,  # PPO clip range
+            policy_kwargs=policy_kwargs,
+            verbose=0,
+            seed=SEED,
+        )
+    else:
+        # Baseline parameters
+        model = PPO(
+            "MlpPolicy",
+            vec_env,
+            n_steps=512,
+            batch_size=256,
+            gamma=0.995,
+            gae_lambda=0.95,
+            ent_coef=0.01,
+            learning_rate=learning_rate,
+            verbose=0,
+            seed=SEED,
+        )
+
     model.learn(total_timesteps=timesteps, progress_bar=True)
+    vec_env.close()
     return model
 
 
-def train_td3(env_id: str, timesteps: int, learning_rate: float = 3e-4):
-    vec_env = DummyVecEnv([make_env(env_id)])
+def train_td3(env_id: str, timesteps: int, learning_rate: float = 3e-4, n_envs: int = 4):
+    vec_env = SubprocVecEnv([make_env(env_id) for _ in range(n_envs)])
     model = TD3(
         "MlpPolicy",
         vec_env,
@@ -77,6 +100,7 @@ def train_td3(env_id: str, timesteps: int, learning_rate: float = 3e-4):
         seed=SEED,
     )
     model.learn(total_timesteps=timesteps, progress_bar=True)
+    vec_env.close()
     return model
 
 
@@ -110,25 +134,28 @@ def main():
     baseline_random = random_baseline("stocks-v0", episodes=5)
     print(f"Random baseline profit: {baseline_random}")
 
-    baseline_model = train_agent("stocks-v0", timesteps=50_000)
+    baseline_model = train_agent("stocks-v0", timesteps=500_000, n_envs=4)
     base_env = gym.make("stocks-v0")
     baseline_eval = evaluate(baseline_model, base_env, episodes=5)
     print(f"PPO baseline profit:    {baseline_eval}")
 
-    print("\n=== Enhanced env (stocks-enhanced-v0) ===")
+    print("\n=== Enhanced env (stocks-enhanced-v0) - Risk-Adjusted Focus ===")
     enhanced_random = random_baseline("stocks-enhanced-v0", episodes=5)
     print(f"Random baseline profit: {enhanced_random}")
 
-    enhanced_model_ppo = train_agent("stocks-enhanced-v0", timesteps=300_000, learning_rate=3e-4)
+    # Try enhanced with different approach: better reward function
+    enhanced_model_ppo = train_agent("stocks-enhanced-v0", timesteps=200_000, learning_rate=3e-4, n_envs=4)
     enhanced_env = gym.make("stocks-enhanced-v0")
     enhanced_eval_ppo = evaluate(enhanced_model_ppo, enhanced_env, episodes=5)
     print(f"PPO enhanced profit:    {enhanced_eval_ppo}")
 
-    # TD3 for continuous sizing
-    enhanced_model_td3 = train_td3("stocks-enhanced-v0", timesteps=300_000, learning_rate=3e-4)
-    enhanced_env_td3 = gym.make("stocks-enhanced-v0")
-    enhanced_eval_td3 = evaluate(enhanced_model_td3, enhanced_env_td3, episodes=5)
-    print(f"TD3 enhanced profit:    {enhanced_eval_td3}")
+    # Compare improvement
+    baseline_profit = baseline_eval["mean"]
+    enhanced_profit = enhanced_eval_ppo["mean"]
+    improvement = ((enhanced_profit - baseline_profit) / baseline_profit) * 100
+    print(".1f")
+
+    # Note: TD3 removed since it requires continuous actions, but we now use discrete actions like baseline
 
 
 if __name__ == "__main__":
